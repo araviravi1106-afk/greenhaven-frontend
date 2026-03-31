@@ -20,7 +20,7 @@ export default function AdminLogin() {
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await api.post('/auth/login', { email, password })
+      const res = await api.post('api/auth/login', { email, password })
       login(res.data.token)
       toast.success('Welcome back, Admin!')
       navigate('/admin/dashboard')
